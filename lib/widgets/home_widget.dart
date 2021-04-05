@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_template/widgets/DestinationCarousel.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeWidget extends StatefulWidget {
@@ -68,30 +69,8 @@ Widget _buildIcon(int i){
                 (MapEntry map) => _buildIcon(map.key),
                 ).toList(),
             ),
-            Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                  Text('Destinations', style: TextStyle(
-                    fontSize: 22.0,
-                     fontWeight:FontWeight.bold,
-                     letterSpacing: 1.5,
-                     ),
-                     ),
-                  Text('View All',
-                  style: TextStyle(
-                    color: Theme.of(context).primaryColor,
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.w600,
-                    letterSpacing: 1.0),)
-                    ],
-            ),
-                ),
-              ]
-            )
+            SizedBox(height:20.0),
+            DestinationCarousel(),
           ],
           ),
           ),

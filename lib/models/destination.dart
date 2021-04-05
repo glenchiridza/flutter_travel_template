@@ -11,7 +11,7 @@ class Destination {
       this.imageUrl,
       this.city,
       this.country,
-      String description,
+      this.description,
       this.activities
     });
 }
@@ -90,7 +90,7 @@ List<Destination> destination = [
     imageUrl: 'assets/images/1.jpg',
     city: "LivingStone",
     country: "Zimbabwe",
-    description:"Visit this cool and nice place!",
+    description: "Visit this cool and nice place!",
     activities: activities,
   ),
   Destination(
@@ -104,42 +104,42 @@ List<Destination> destination = [
     imageUrl: 'assets/images/3.jpg',
     city: "Vic Falls",
     country: "Zimbabwe",
-    description:"Visit this cool and nice place!",
+    description: "Visit this cool and nice place!",
     activities: activities,
   ),
   Destination(
     imageUrl: 'assets/images/4.jpg',
     city: "Great Zim",
     country: "Zimbabwe",
-    description:"Visit this cool and nice place!",
+    description: "Visit this cool and nice place!",
     activities: activities,
   ),
   Destination(
     imageUrl: 'assets/images/5.jpg',
     city: "Zvimba",
     country: "Zimbabwe",
-    description:"Visit this cool and nice place!",
+    description: "Visit this cool and nice place!",
     activities: activities,
   ),
   Destination(
     imageUrl: 'assets/images/6.jpg',
     city: "Dunken",
     country: "Zimbabwe",
-    description:"Visit this cool and nice place!",
+    description: "Visit this cool and nice place!",
     activities: activities,
   ),
   Destination(
     imageUrl: 'assets/images/7.jpg',
     city: "Chinhoyi",
     country: "Zimbabwe",
-    description:"Visit this cool and nice place!",
+    description: "Visit this cool and nice place!",
     activities: activities,
   ),
   Destination(
     imageUrl: 'assets/images/7.jpg',
     city: "Bulawayo",
     country: "Zimbabwe",
-    description:"Visit this cool and nice place!",
+    description: "Visit this cool and nice place!",
     activities: activities,
   ),
 ];
