@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/widgets/DestinationCarousel.dart';
+import 'package:flutter_template/widgets/HotelCarousel.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeWidget extends StatefulWidget {
@@ -11,6 +12,7 @@ class HomeWidget extends StatefulWidget {
 class _HomeWidgetState extends State<HomeWidget> {
 
 int _activeIndex = 0;
+int _currentTab = 0;
 List<IconData> _icons = [
   FontAwesomeIcons.plane,
   FontAwesomeIcons.bed,
@@ -71,9 +73,40 @@ Widget _buildIcon(int i){
             ),
             SizedBox(height:20.0),
             DestinationCarousel(),
+            SizedBox(height:20.0),
+            HotelCarousel(),
           ],
           ),
           ),
+          bottomNavigationBar: BottomNavigationBar(
+            currentIndex: _currentTab,
+            onTap: (int index){
+              setState(() {
+                _currentTab = index;
+              });
+            },
+            items: [
+              BottomNavigationBarItem(
+              icon: Icon(
+                Icons.search,
+                 size: 25.0,),
+                 title: SizedBox.shrink()
+                ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home_outlined,
+                 size: 25.0,),
+                 title: SizedBox.shrink()
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.local_pizza,
+                 size: 25.0,),
+                 title: SizedBox.shrink()
+            ),
+
+            ],
+            ),
     );
   }
 }
