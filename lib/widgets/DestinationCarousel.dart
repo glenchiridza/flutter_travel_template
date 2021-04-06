@@ -101,11 +101,14 @@ class DestinationCarousel extends StatelessWidget {
                                       blurRadius: 6.0)],
                                      ),
                                      child: Stack(children: [
-                                       ClipRRect(
-                                         borderRadius: BorderRadius.circular(20.0),
-                                         child: Image(height: 180.0, width: 180.0,
-                                         image: AssetImage(destine.imageUrl),
-                                         fit: BoxFit.cover,
+                                       Hero(
+                                         tag: destine.imageUrl,
+                                         child: ClipRRect(
+                                           borderRadius: BorderRadius.circular(20.0),
+                                           child: Image(height: 180.0, width: 180.0,
+                                           image: AssetImage(destine.imageUrl),
+                                           fit: BoxFit.cover,
+                                           ),
                                          ),
                                        ),
                                        Positioned(
